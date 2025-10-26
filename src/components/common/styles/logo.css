@@ -1,0 +1,17 @@
+@reference "../../../index.css";
+
+.logo-container {
+	@apply rounded-full overflow-clip;
+}
+
+.logo-container.sm .logo-img {
+	@apply max-w-8;
+}
+
+.logo-container.md {
+	@apply max-w-12;
+}
+
+.logo-container.lg .logo-img {
+	@apply max-w-16;
+}

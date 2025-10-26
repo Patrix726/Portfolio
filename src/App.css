@@ -1,0 +1,27 @@
+@reference "./index.css";
+
+.main-container {
+	@apply flex flex-col gap-2 bg-main-background pt-4;
+}
+
+.decorator {
+	@apply bg-frame;
+	width: 100vw;
+	height: 100vh;
+	clip-path: polygon(
+		8px 100%,
+		8px 5%,
+		clamp(20px, 5%, 5vh) 8px,
+		calc(100% - 8px) 8px,
+		calc(100% - 8px) 100%,
+		100% 100%,
+		100% 0,
+		0 0,
+		0 100%,
+		8px 100%
+	);
+	clip-rule: nonzero;
+	z-index: 49;
+	position: fixed;
+	inset: 0;
+}

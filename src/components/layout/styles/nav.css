@@ -1,0 +1,10 @@
+@reference "../../../index.css";
+
+.nav-container {
+	@apply px-8 py-6 pl-16 flex gap-6 justify-around items-center fixed top-[6px] right-0 z-50 bg-frame border-none;
+	clip-path: polygon(0 0, 15% 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.nav-link {
+	@apply text-gray-900 dark:text-gray-50 hover:scale-110 transition-all;
+}
