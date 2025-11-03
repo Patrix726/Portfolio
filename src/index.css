@@ -140,7 +140,8 @@ body::-webkit-scrollbar-thumb {
 .dark {
 	--background: oklch(0.145 0 0);
 	--main-background: var(--color-gray-700);
-	--alternate: oklch(21% 0.034 264.665);
+	/* --alternate: oklch(21% 0.034 264.665); */
+	--alternate: var(--color-gray-800);
 	--foreground: oklch(0.985 0 0);
 	--frame: oklch(21% 0.034 264.665);
 	--card: oklch(0.205 0 0);

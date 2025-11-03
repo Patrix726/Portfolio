@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./App.css";
 import { AboutSection } from "./components/layout/AboutSection";
 import { ContactSection } from "./components/layout/ContactSection";
@@ -11,6 +12,7 @@ import { SkillsSection } from "./components/layout/SkillsSection";
 function App() {
 	return (
 		<>
+			<Toaster />
 			<Nav />
 			<main className="main-container">
 				<LogoSection />
