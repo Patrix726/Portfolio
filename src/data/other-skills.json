@@ -1,7 +1,14 @@
 {
-	"Languages": ["Python", "Java", "Go", "Bash", "Lua", "SQL"],
-	"Frontend": ["Svelte.js", "SvelteKit", "Remix"],
-	"Backend": ["Spring Boot", "Nest.js", "Django", "Hono.js"],
+	"Languages": ["Python", "Java", "Dart", "Go", "Bash", "Lua", "SQL"],
+	"Frontend": [
+		"Svelte.js",
+		"SvelteKit",
+		"Remix",
+		"Redux",
+		"Bootstrap",
+		"Flutter"
+	],
+	"Backend": ["Spring Boot", "Hono.js", "Nest.js", "Django"],
 	"Database/ORM": ["MySql", "SQlite", "Drizzle"],
 	"DevOps": ["Github Actions", "Docker"]
 }

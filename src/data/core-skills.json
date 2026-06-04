@@ -1,5 +1,5 @@
 {
-	"Languages": ["Typescript", "Javascript", "Html", "CSS"],
+	"Languages": ["Html", "CSS", "Javascript", "Typescript"],
 	"Frontend": ["React.js", "Next.js", "Tailwind"],
 	"Backend": ["Node.js", "Express.js"],
 	"Database/ORM": ["PostgreSQL", "MongoDB", "Prisma"],
