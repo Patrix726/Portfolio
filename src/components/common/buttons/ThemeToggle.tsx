@@ -1,47 +1,32 @@
-import { DarkModeToggle, type Mode } from "@anatoliygatt/dark-mode-toggle";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export const ThemeToggle = () => {
-	const [mode, setMode] = useState<Mode>("light");
+	const [dark, setDark] = useState(false);
 
 	useEffect(() => {
-		document.documentElement.classList.toggle(
-			"dark",
+		const isDark =
 			localStorage.theme === "dark" ||
-				(!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
-		);
-
-		if (document.documentElement.classList.contains("dark")) {
-			setMode("dark");
-		}
+			(!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
+		document.documentElement.classList.toggle("dark", isDark);
+		setDark(isDark);
 	}, []);
 
-	useEffect(() => {
-		localStorage.theme = mode;
+	const toggle = () => {
+		const next = !dark;
+		setDark(next);
+		localStorage.theme = next ? "dark" : "light";
+		document.documentElement.classList.toggle("dark", next);
+	};
 
-		document.documentElement.classList.toggle(
-			"dark",
-			localStorage.theme === "dark" ||
-				(!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
-		);
-	}, [mode]);
 	return (
-		<DarkModeToggle
-			mode={mode}
-			dark=""
-			light=""
-			size="sm"
-			inactiveTrackColor="#e2e8f0"
-			inactiveTrackColorOnHover="#f8fafc"
-			inactiveTrackColorOnActive="#cbd5e1"
-			activeTrackColor="#334155"
-			activeTrackColorOnHover="#1e293b"
-			activeTrackColorOnActive="#0f172a"
-			inactiveThumbColor="#1e293b"
-			activeThumbColor="#e2e8f0"
-			onChange={(mode) => {
-				setMode(mode);
-			}}
-		/>
+		<button
+			type="button"
+			onClick={toggle}
+			className="text-foreground hover:scale-110 transition-all cursor-pointer"
+			aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+		>
+			{dark ? <Sun className="w-5 h-5 sm:w-6 sm:h-6" /> : <Moon className="w-5 h-5 sm:w-6 sm:h-6" />}
+		</button>
 	);
 };

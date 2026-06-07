@@ -1,17 +1,25 @@
 @reference "../../../index.css";
 
+.nav-wrapper {
+	position: fixed;
+	right: 0;
+	z-index: 50;
+	filter: drop-shadow(-2px 0 0 var(--frame-edge)) drop-shadow(0 2px 0 var(--frame-edge));
+}
+
 .nav-container {
-	@apply px-4 py-2 sm:py-3 gap-4 pl-12 md:px-8 md:py-6 md:pl-16 flex md:gap-6 justify-around items-center fixed top-[6px] right-0 z-50 bg-frame border-none;
+	@apply px-4 py-2 sm:py-3 gap-4 pl-12 md:px-8 md:py-6 md:pl-16 flex md:gap-6 justify-around items-center bg-frame border-none;
 	clip-path: polygon(0 0, 15% 100%, 100% 100%, 100% 0, 0 0);
+	pointer-events: auto;
 }
 
 .nav-link {
-	@apply text-gray-900 dark:text-gray-50 relative;
+	@apply text-foreground relative;
 }
 
 .nav-link::after {
 	content: "";
-	@apply absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 dark:bg-gray-50 transition-all duration-300;
+	@apply absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground transition-all duration-300;
 }
 
 .nav-link:hover::after {
@@ -19,5 +27,5 @@
 }
 
 .nav-icon {
-	@apply text-gray-900 dark:text-gray-50 hover:scale-110 transition-all inline-flex;
+	@apply text-foreground hover:scale-110 transition-all inline-flex;
 }

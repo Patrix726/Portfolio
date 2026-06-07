@@ -1,90 +1,87 @@
 @reference "../../../index.css";
 
 .section {
-	@apply p-6 sm:p-12 md:p-18;
+	@apply px-6 sm:px-12 md:px-18 py-4 sm:py-8 md:py-12;
 }
 
+/* === HERO === */
 .hero-section {
-	@apply flex gap-2 h-screen max-h-[800px];
+	@apply px-6 sm:px-12 md:px-18 pt-8 md:pt-12 pb-2 md:pb-4 mt-2 md:mt-8 mb-2 md:mb-4;
 }
 
-.hero-section .left {
-	@apply flex flex-col justify-center pl-8 gap-2 h-full flex-1;
+.hero-inner {
+	@apply flex items-end gap-4 md:gap-8;
 }
 
-.hero-section .right {
-	@apply flex-1 relative overflow-visible;
-
-	/* width: clamp(100px, min(50dvh, 50dvw), 500px); */
-	/* aspect-ratio: 1; */
+.hero-photo {
+	@apply shrink-0 cursor-pointer;
 }
 
-.hero-section .right .pattern {
-	@apply absolute inset-0;
-	border-radius: 100% 30% 60% 70% / 50% 40% 70% 70%;
-	background:
-		url("../../../assets/circuit-board.svg"),
-		linear-gradient(45deg, oklch(0 0.3 300) 10%, oklch(0.15 0.3 300) 50%);
-	animation: blob-rotation 4s infinite alternate;
+.hero-photo-clip {
+	@apply w-[90px] h-[100px] md:w-[140px] md:h-[150px] overflow-hidden aspect-auto;
+	border: 2px solid var(--color-frame);
 }
 
-.hero-section .right .headshot {
-	@apply w-96 z-20 absolute m-auto inset-0;
-	clip-path: circle(50%);
+.hero-photo-clip img {
+	@apply w-full h-full object-cover object-top;
 }
 
+.hero-text {
+	@apply flex flex-col gap-1;
+}
+
+/* === ABOUT === */
 .about-section {
-	@apply bg-alternate flex flex-col gap-8;
+	@apply px-6 sm:px-12 md:px-18 pb-2 md:pb-4 flex flex-col gap-3;
 }
 
+.about-text p {
+	@apply text-sm sm:text-base md:text-lg leading-relaxed;
+}
+
+.skills-compact {
+	@apply flex flex-col flex-wrap items-start gap-2 mt-1 mb-2 md:mb-4;
+}
+
+.skills-label {
+	@apply text-sm font-bold mr-1 text-frame;
+}
+
+.skills-pills {
+	@apply flex flex-wrap gap-1.5;
+}
+
+/* === PROJECTS === */
 .projects-section {
 	@apply max-h-max h-max flex flex-col gap-8;
 }
 
+/* === EXPERIENCE === */
 .experience-section {
-	@apply bg-alternate max-h-max h-max flex flex-col gap-4;
+	@apply max-h-max h-max flex flex-col gap-4;
 }
 
+/* === CONTACT === */
 .contact-section {
-	@apply bg-alternate;
 }
 
 .contact-section form input {
 	@apply w-[60%] mt-4 bg-transparent border-0 border-b px-4 py-5 font-bold text-lg;
 	transition: 0.2s ease-in-out;
 }
+
 .contact-section form textarea {
 	@apply w-[96%] mt-4 bg-transparent border-0 border-b px-4 py-5 font-bold text-lg;
 	resize: none;
 	transition: 0.2s ease-in-out;
 }
+
 .contact-section form input:focus {
-	@apply border-b-4 border-b-frame dark:border-b-gray-700;
+	@apply border-b-4 border-b-frame;
 	outline: none;
 }
+
 .contact-section form textarea:focus {
-	@apply border-b-4 border-b-frame dark:border-b-gray-700;
+	@apply border-b-4 border-b-frame;
 	outline: none;
-}
-
-@keyframes blob-rotation {
-	0% {
-		border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-	}
-
-	25% {
-		border-radius: 50% 60% 30% 70% / 60% 40% 70% 50%;
-	}
-
-	50% {
-		border-radius: 70% 30% 60% 40% / 50% 70% 30% 60%;
-	}
-
-	75% {
-		border-radius: 40% 70% 50% 60% / 60% 50% 70% 40%;
-	}
-
-	100% {
-		border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-	}
 }

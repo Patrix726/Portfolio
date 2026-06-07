@@ -21,9 +21,9 @@ export const ExperienceSection = () => {
 						</Reveal>
 					))}
 				</div>
-				<div className="flex-1 md:flex hidden items-center">
-					<img src="/images/experience.png" alt="experience illustration" />
-				</div>
+				{/* <div className="flex-1 md:flex hidden items-center"> */}
+				{/* 	<img src="/images/experience.png" alt="experience illustration" /> */}
+				{/* </div> */}
 			</div>
 		</section>
 	);

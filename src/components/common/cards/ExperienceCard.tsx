@@ -22,16 +22,16 @@ const ExperienceCard = ({ company, description, from, position, stack, to, locat
 		duration = `${months[from.getMonth()]} - ${months[to.getMonth()]} ${to.getFullYear()}`;
 	}
 	return (
-		<div className="p-6 rounded-lg flex gap-6 max-w-[800px] relative">
+		<div className="p-4 sm:p-6 rounded-lg flex flex-col sm:flex-row gap-1 sm:gap-6 max-w-[800px] relative">
 			<div className="hidden sm:flex flex-col items-center mt-2">
 				<div className="w-3 h-3 rounded-full bg-frame ring-2 ring-frame/30 shrink-0"></div>
 			</div>
-			<div className="flex justify-start flex-2 mt-2 min-w-[90px]">
+			<div className="sm:mt-2 sm:min-w-[90px]">
 				<p className="dark:text-gray-200 text-gray-600 text-xs sm:text-sm whitespace-nowrap">
 					{duration}
 				</p>
 			</div>
-			<div className="flex flex-col gap-4 flex-5">
+			<div className="flex flex-col gap-4 flex-1">
 				<div className="flex flex-col gap-1">
 					<h4>
 						{position}{" "}

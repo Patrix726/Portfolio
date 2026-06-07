@@ -35,9 +35,6 @@ importers:
 
   .:
     dependencies:
-      '@anatoliygatt/dark-mode-toggle':
-        specifier: ^1.0.1
-        version: 1.0.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       '@emailjs/browser':
         specifier: ^4.4.1
         version: 4.4.1
@@ -107,13 +104,6 @@ importers:
         version: 8.0.16(@types/node@24.8.0)(jiti@2.6.1)(yaml@2.9.0)
 
 packages:
-
-  '@anatoliygatt/dark-mode-toggle@1.0.1':
-    resolution: {integrity: sha512-zOjGHCeTGXxuWuh02NMTHAJ7VrptoVKmGHr/Pb4r+rsUBUz7OEI0x6HXTFZ15RFOAG2pfKjMmQQaOgfhfbyv1w==}
-    peerDependencies:
-      '@emotion/react': ^11.0.0
-      '@emotion/styled': ^11.0.0
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -1108,12 +1098,6 @@ packages:
     hasBin: true
 
 snapshots:
-
-  '@anatoliygatt/dark-mode-toggle@1.0.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)':
-    dependencies:
-      '@emotion/react': 11.14.0(@types/react@19.2.2)(react@19.2.0)
-      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
-      react: 19.2.0
 
   '@babel/code-frame@7.27.1':
     dependencies:

@@ -16,9 +16,9 @@ const isGitHub = (label: string) => label.toLowerCase() === "github";
 const ProjectCard = ({ title, description, links, stack, image }: props) => {
 	return (
 		<motion.div
-			className="p-4 rounded-lg flex flex-col gap-2 break-inside-avoid-column border border-gray-700 dark:border-white/20 mb-4 bg-white/50 dark:bg-white/5 backdrop-blur-sm"
-			whileHover={{ y: -6, boxShadow: "0 12px 40px rgba(0,0,0,0.12)" }}
-			transition={{ duration: 0.3, ease: "easeOut" }}
+			className="p-4 rounded-lg flex flex-col gap-2 break-inside-avoid-column border border-gray-700/30 dark:border-white/10 mb-4 bg-white/50 dark:bg-white/5 backdrop-blur-sm"
+			whileHover={{ y: -8, boxShadow: "0 20px 60px -12px rgba(247,105,53,0.18)" }}
+			transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }}
 		>
 			{image && (
 				<motion.img
