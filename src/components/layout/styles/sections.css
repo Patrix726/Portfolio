@@ -22,12 +22,9 @@
 .hero-section .right .pattern {
 	@apply absolute inset-0;
 	border-radius: 100% 30% 60% 70% / 50% 40% 70% 70%;
-	background: linear-gradient(
-		45deg,
-		oklch(0 0.3 300) 10%,
-		oklch(0.15 0.3 300) 50%
-	);
-	background: url("../../../assets/circuit-board.svg");
+	background:
+		url("../../../assets/circuit-board.svg"),
+		linear-gradient(45deg, oklch(0 0.3 300) 10%, oklch(0.15 0.3 300) 50%);
 	animation: blob-rotation 4s infinite alternate;
 }
 
@@ -42,9 +39,6 @@
 
 .projects-section {
 	@apply max-h-max h-max flex flex-col gap-8;
-}
-
-.skills-section {
 }
 
 .experience-section {

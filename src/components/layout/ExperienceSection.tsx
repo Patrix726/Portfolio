@@ -1,23 +1,24 @@
 import experiences from "../../data/experience.json";
 import ExperienceCard from "../common/cards/ExperienceCard";
+import { Reveal } from "../Reveal";
 
 export const ExperienceSection = () => {
 	return (
-		<section className="experience-section section">
-			<h2>Experience</h2>
-			<div className="flex gap-4 items-center">
-				<div className="flex flex-col mt-2 gap-8 flex-2">
-					{experiences.map((experience) => (
-						<ExperienceCard
-							key={experience.company}
-							{...experience}
-							from={new Date(experience.from)}
-							to={
-								experience.to === "Present"
-									? experience.to
-									: new Date(experience.to)
-							}
-						/>
+		<section id="experience" className="experience-section section">
+			<Reveal>
+				<h2>Experience</h2>
+			</Reveal>
+			<div className="flex gap-4 items-start">
+				<div className="relative flex flex-col mt-2 gap-8 flex-2">
+					<div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-frame/30 hidden sm:block"></div>
+					{experiences.map((experience, idx) => (
+						<Reveal key={experience.company} delay={idx * 0.1}>
+							<ExperienceCard
+								{...experience}
+								from={new Date(experience.from)}
+								to={experience.to === "Present" ? experience.to : new Date(experience.to)}
+							/>
+						</Reveal>
 					))}
 				</div>
 				<div className="flex-1 md:flex hidden items-center">

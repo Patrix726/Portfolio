@@ -6,5 +6,18 @@
 }
 
 .nav-link {
-	@apply text-gray-900 dark:text-gray-50 hover:scale-110 transition-all;
+	@apply text-gray-900 dark:text-gray-50 relative;
+}
+
+.nav-link::after {
+	content: "";
+	@apply absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 dark:bg-gray-50 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+	@apply w-full;
+}
+
+.nav-icon {
+	@apply text-gray-900 dark:text-gray-50 hover:scale-110 transition-all inline-flex;
 }

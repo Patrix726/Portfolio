@@ -23,7 +23,7 @@ function App() {
 				<ProjectsSection />
 				<ContactSection />
 			</main>
-			<div className="decorator"></div>
+			<div className="decorator pointer-events-none"></div>
 		</div>
 	);
 }

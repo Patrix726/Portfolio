@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 import ToolCard from "./ToolCard";
 
 type props = {
@@ -9,31 +11,55 @@ type props = {
 	bg?: "default" | "alt";
 };
 
+const isGitHub = (label: string) => label.toLowerCase() === "github";
+
 const ProjectCard = ({ title, description, links, stack, image }: props) => {
 	return (
-		<div
-			className={`p-4 rounded-lg flex flex-col gap-2 break-inside-avoid-column border border-gray-700 dark:border-white mb-4`}
+		<motion.div
+			className="p-4 rounded-lg flex flex-col gap-2 break-inside-avoid-column border border-gray-700 dark:border-white/20 mb-4 bg-white/50 dark:bg-white/5 backdrop-blur-sm"
+			whileHover={{ y: -6, boxShadow: "0 12px 40px rgba(0,0,0,0.12)" }}
+			transition={{ duration: 0.3, ease: "easeOut" }}
 		>
-			{image && <img src={image} alt={`${title}'s thumbnail`} />}
+			{image && (
+				<motion.img
+					src={image}
+					alt={`${title}'s thumbnail`}
+					className="rounded-md"
+					whileHover={{ scale: 1.03 }}
+					transition={{ duration: 0.4 }}
+				/>
+			)}
 			<h4 className="text-wrap">{title}</h4>
 			<div className="flex gap-2 flex-wrap mb-2">
 				{stack.map((tool) => (
 					<ToolCard title={tool} size="sm" key={tool} />
 				))}
 			</div>
-			<p>{description}</p>
-			<div className="flex gap-2 flex-wrap mt-2">
-				{links.map((link) => (
-					<a
-						href={link.url}
-						className="border border-frame px-3 py-1.5 rounded hover:bg-frame "
-						key={link.url}
-					>
-						{link.label}
-					</a>
-				))}
+			<p className="text-sm sm:text-base">{description}</p>
+			<div className="flex gap-3 flex-wrap mt-auto pt-3">
+				{links.map((link) => {
+					const github = isGitHub(link.label);
+					return (
+						<motion.a
+							key={link.url}
+							href={link.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.97 }}
+							className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+								github
+									? "border border-gray-400 dark:border-gray-500 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10"
+									: "bg-frame text-white shadow-sm hover:brightness-110"
+							}`}
+						>
+							{github ? <Github className="w-4 h-4" /> : <ExternalLink className="w-4 h-4" />}
+							<span>{link.label}</span>
+						</motion.a>
+					);
+				})}
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

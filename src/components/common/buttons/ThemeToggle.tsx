@@ -8,8 +8,7 @@ export const ThemeToggle = () => {
 		document.documentElement.classList.toggle(
 			"dark",
 			localStorage.theme === "dark" ||
-				(!("theme" in localStorage) &&
-					window.matchMedia("(prefers-color-scheme: dark)").matches),
+				(!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
 		);
 
 		if (document.documentElement.classList.contains("dark")) {
@@ -23,8 +22,7 @@ export const ThemeToggle = () => {
 		document.documentElement.classList.toggle(
 			"dark",
 			localStorage.theme === "dark" ||
-				(!("theme" in localStorage) &&
-					window.matchMedia("(prefers-color-scheme: dark)").matches),
+				(!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
 		);
 	}, [mode]);
 	return (

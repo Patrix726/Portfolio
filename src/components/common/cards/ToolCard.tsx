@@ -11,9 +11,7 @@ const sizes = {
 };
 const ToolCard = ({ title, bg = "default", size = "md" }: props) => {
 	return (
-		<div
-			className={`${sizes[size]} ${bg === "default" ? "bg-frame" : "bg-main-background"} `}
-		>
+		<div className={`${sizes[size]} ${bg === "default" ? "bg-frame" : "bg-main-background"} `}>
 			<p>{title}</p>
 		</div>
 	);
