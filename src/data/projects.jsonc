@@ -1,0 +1,41 @@
+[
+	{
+		"image": "/images/project-pics/ridelink.png",
+		"title": "RideLink Carpooling Platform",
+		"description": "A real-time carpooling platform connecting drivers and passengers for daily commutes. Features trip scheduling, route matching, and driver ratings.",
+		"stack": ["React", "Flutter", "Node.js", "Express", "Convex", "Postgres"],
+		"links": [
+			{ "label": "Live Site", "url": "https://ride-link.netlify.app" }
+			// { "label": "GitHub", "url": "https://github.com/username/ridelink" }
+		]
+	},
+	{
+		"image": "/images/project-pics/emr.png",
+		"title": "HealthTrack EMR System",
+		"description": "A full-stack electronic medical record platform with role-based dashboards for doctors, patients, and receptionists. Includes appointment scheduling, invoice management, and secure authentication.",
+		"stack": ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+		"links": [
+			{
+				"label": "Live Site",
+				"url": "https://emr.nebil.work"
+			},
+			{
+				"label": "GitHub",
+				"url": "https://github.com/Patrix726/DHCMS"
+			}
+		]
+	},
+	{
+		"image": "/images/project-pics/spotlyrics.png",
+		"title": "Spotify Lyrics Web App",
+		"description": "A web app that syncs Spotify playback with real-time lyrics using the Spotify API. Designed for a clean, distraction-free experience.",
+		"stack": ["Next.js", "Tailwind CSS", "Spotify API"],
+		"links": [
+			{ "label": "Live Site", "url": "https://spotlyrics.nebil.work" },
+			{
+				"label": "GitHub",
+				"url": "https://github.com/Patrix726/Spotlyrics"
+			}
+		]
+	}
+]
