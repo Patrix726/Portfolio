@@ -6,7 +6,7 @@
 
 /* === HERO === */
 .hero-section {
-	@apply pb-2 md:pb-4 mt-2 md:mt-8 mb-2 md:mb-4;
+	@apply pb-2 md:pb-4 mt-6 md:mt-8 mb-2 md:mb-4;
 }
 
 .hero-inner {
@@ -18,7 +18,7 @@
 }
 
 .hero-photo-clip {
-	@apply w-[90px] h-[100px] md:w-[140px] md:h-[150px] overflow-hidden border-2 border-frame hidden sm:block;
+	@apply h-[100px] md:h-[150px] overflow-hidden border-2 border-frame aspect-[1/1.07];
 }
 
 .hero-photo-clip img {
@@ -26,12 +26,12 @@
 }
 
 .hero-text {
-	@apply flex flex-col gap-1;
+	@apply flex flex-col gap-0;
 }
 
 /* === ABOUT === */
 .about-section {
-	@apply flex flex-col gap-3;
+	@apply flex flex-col gap-3 pt-1 sm:pt-1;
 }
 
 .about-text p {
@@ -52,7 +52,7 @@
 
 /* === PROJECTS === */
 .projects-section {
-	@apply max-h-max h-max flex flex-col gap-8;
+	@apply max-h-max h-max flex flex-col gap-6;
 }
 
 .project-card {
@@ -69,8 +69,9 @@
 }
 
 /* === CONTACT === */
-/* .contact-section { */
-/* } */
+.contact-section {
+	@apply flex flex-col gap-4;
+}
 
 .contact-section form input {
 	@apply w-full sm:w-[60%] mt-4 bg-transparent border-0 border-b px-4 py-5 font-bold text-lg;

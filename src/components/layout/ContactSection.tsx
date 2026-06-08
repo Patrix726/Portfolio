@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/lib/constants";
+import { SectionHeader } from "../common/SectionHeader";
 import { Reveal } from "../Reveal";
 
 export const ContactSection = () => {
@@ -46,7 +47,7 @@ export const ContactSection = () => {
 	return (
 		<section id="contact" className="contact-section section">
 			<Reveal>
-				<h2 className="mb-4">Contact Me</h2>
+				<SectionHeader>Contact Me</SectionHeader>
 			</Reveal>
 			<motion.form
 				onSubmit={sendEmail}

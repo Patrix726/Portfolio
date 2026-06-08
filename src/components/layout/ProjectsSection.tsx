@@ -1,6 +1,7 @@
 import type { JSX } from "react/jsx-runtime";
 import projects from "../../data/projects.jsonc";
 import ProjectCard from "../common/cards/ProjectCard";
+import { SectionHeader } from "../common/SectionHeader";
 import { Reveal } from "../Reveal";
 
 type Project = JSX.IntrinsicAttributes & {
@@ -16,9 +17,9 @@ export const ProjectsSection = () => {
 	return (
 		<section id="projects" className="projects-section section">
 			<Reveal>
-				<h2>Projects</h2>
+				<SectionHeader>Projects</SectionHeader>
 			</Reveal>
-			<div className="columns-[320px] gap-4 mt-4">
+			<div className="columns-[320px] gap-4">
 				{projects.map((project: Project, idx: number) => (
 					<Reveal key={project.title} delay={idx * 0.1}>
 						<ProjectCard {...project} />

@@ -1,6 +1,7 @@
 import type { JSX } from "react/jsx-runtime";
 import experiences from "../../data/experience.jsonc";
 import ExperienceCard from "../common/cards/ExperienceCard";
+import { SectionHeader } from "../common/SectionHeader";
 import { Reveal } from "../Reveal";
 
 type Experience = JSX.IntrinsicAttributes & {
@@ -17,7 +18,7 @@ export const ExperienceSection = () => {
 	return (
 		<section id="experience" className="experience-section section">
 			<Reveal>
-				<h2>Experience</h2>
+				<SectionHeader>Experience</SectionHeader>
 			</Reveal>
 			<div className="flex gap-4 items-start">
 				<div className="relative flex flex-col mt-2 gap-8 flex-2">
