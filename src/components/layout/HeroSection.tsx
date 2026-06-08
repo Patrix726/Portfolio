@@ -22,7 +22,7 @@ export const HeroSection = () => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 					>
-						Hi, I'm{" "}
+						Hi, I'm
 					</motion.p>
 					<motion.h1
 						initial={{ opacity: 0, x: -20 }}
@@ -36,13 +36,13 @@ export const HeroSection = () => {
 							Nebil
 						</span>
 					</motion.h1>
-					<motion.h4
+					<motion.h5
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.5 }}
 					>
 						I build things for the web
-					</motion.h4>
+					</motion.h5>
 				</div>
 			</div>
 		</section>
