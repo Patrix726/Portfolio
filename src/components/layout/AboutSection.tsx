@@ -33,7 +33,7 @@ export const AboutSection = () => {
 			</Reveal>
 			<Reveal delay={0.25}>
 				<a
-					href="https://github.com/patrix726/resume/releases/latest/download/resume.pdf"
+					href="https://github.com/nebilra/resume/releases/latest/download/resume.pdf"
 					download
 					className="btn inline-flex gap-2 items-center justify-center mt-4"
 				>

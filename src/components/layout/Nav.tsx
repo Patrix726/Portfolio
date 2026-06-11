@@ -16,7 +16,7 @@ export const Nav = () => {
 			<nav className="nav-container">
 				<ul className="flex gap-4 md:gap-6">
 					<a
-						href="https://github.com/patrix726/resume/releases/latest/download/resume.pdf"
+						href="https://github.com/nebilra/resume/releases/latest/download/resume.pdf"
 						download
 						className="nav-icon"
 						aria-label="Resume"
@@ -25,7 +25,7 @@ export const Nav = () => {
 						<FileText className="md:w-6 md:h-6 sm:w-4 sm:h-4 w-4 h-4" />
 					</a>
 					<a
-						href="https://github.com/Patrix726"
+						href="https://github.com/nebilra"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="nav-icon"
